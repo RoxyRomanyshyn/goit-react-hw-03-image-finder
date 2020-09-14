@@ -9,7 +9,7 @@ export default class Spinner extends React.Component {
         styles.loader
       } >
       <
-      Loader type = "TailSpin"
+      Loader type = "Puff"
       color = "#00BFFF"
       height = {
         80

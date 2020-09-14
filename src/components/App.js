@@ -23,8 +23,7 @@ export default class App extends Component {
   componentDidUpdate(prevProps, prevState) {
     const prevQuery = prevState.sQuery;
     const nextQuery = this.state.sQuery;
-    // const prevPage = prevState.page;
-    // const nextPage = this.state.page
+
     if (prevQuery !== nextQuery) {
       this.fetchArticles()
     };
@@ -53,7 +52,7 @@ export default class App extends Component {
       page
     } = this.state
     axios
-      .get(`https://pixabay.com/api/?q=${sQuery}&page=${page}&key=16979743-523237a41d7b002c0229d3266&image_type=photo&orientation=horizontal&per_page=12`)
+      .get(`https://pixabay.com/api/?q=${sQuery}&page=${page}&key=17195229-890eab4d4ceb15a1b34ad06cf&image_type=photo&orientation=horizontal&per_page=12`)
       .then(response => this.setState(prevState => ({
         articles: [...prevState.articles, ...response.data.hits],
         page: prevState.page + 1,
